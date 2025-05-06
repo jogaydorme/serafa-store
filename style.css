@@ -202,26 +202,44 @@ footer {
 .menu-icon a:active i {
   transform: scale(0.9);
 }
+.search-container {
+  /* Estilos para o container do campo de busca, se necessário */
+}
 
 .search-bar {
   padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 20px;
+  outline: none; /* Remove a borda ao focar */
 }
+
 
 .cart-icon {
   position: relative;
 }
 
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espaço entre o ícone, contagem e total */
+  position: relative; /* Para posicionar a contagem */
+}
+
+
 .cart-count {
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
-  background-color: red;
+  background-color: red; /*Cor do Circulo */
   color: white;
   border-radius: 50%;
   padding: 0.2rem 0.4rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+}
+
+.cart-total {
+  font-size: 0.9rem; /* Tamanho do preço */
 }
 
 * {
