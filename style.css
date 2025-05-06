@@ -36,12 +36,6 @@ body {
   justify-content: center;
 }
 
-.produtos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas responsivas com largura mínima de 250px */
-  gap: 2rem;
-  padding: 2rem;
-}
 
 .produto:hover {
   transform: translateY(-5px);
