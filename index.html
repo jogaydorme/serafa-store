@@ -1,234 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  
   <title>SERAFA STORE</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header class="nav-head" data-store="head-desktop">
-    <div class="nav-head-fixed header-bar-fixed">
-      <div class="container display-when-content-ready">
-        <div class="nav-head-main flex">
-          <div class="logo-container">
-            <a href="/" title="SERAFA STORE">
-              <img class="logo-img logo-fixed" src="img/logo.png" alt="SERAFA STORE">
-            </a>
-            <a class="logo-text hidden" href="/">SERAFA STORE</a>
-          </div>
-          <ul class="desktop-nav hidden-xs desktop-nav" data-store="navigation">
-            <li class="desktop-nav-item selected first">
-              <a class="desktop-nav-link" href="/">Início</a>
-            </li>
-            <li class="desktop-nav-item">
-              <a class="desktop-nav-link" href="#produtos">Produtos
-                <span class="desktop-nav-arrow arrow">
-                  <i class="fas fa-chevron-down"></i>
-                </span>
-              </a>
-              <ul class="desktop-nav-list">
-                <li class="desktop-nav-item">
-                  <a class="desktop-nav-link" href="#camisas-de-time">Camisas de Time</a>
-                </li>
-                <li class="desktop-nav-item">
-                  <a class="desktop-nav-link" href="#camisetas">Camisetas</a>
-                </li>
-                <li class="desktop-nav-item">
-                  <a class="desktop-nav-link" href="#bermudas">Bermudas</a>
-                </li>
-                <li class="desktop-nav-item">
-                  <a class="desktop-nav-link" href="#agasalhos">Agasalhos</a>
-                </li>
-                <li class="desktop-nav-item">
-                  <a class="desktop-nav-link" href="#conjuntos">Conjuntos</a>
-                </li>
-              </ul>
-            </li>
-            <li class="desktop-nav-item">
-              <a class="desktop-nav-link" href="https://wa.me/5511943053076" target="_blank">WhatsApp</a>
-            </li>
-            <li class="desktop-nav-item">
-              <a class="desktop-nav-link" href="https://www.instagram.com/serafa_store" target="_blank">Instagram</a>
-            </li>
-          </ul>
-          <div class="d-flex">
-            <div class="desktop-search">
-              <div class="js-search-container">
-                <form class="js-search-form" action="/search/" method="get" role="form">
-                  <div class="form-group">
-                    <input class="js-search-input form-control desktop-search-input" type="search" autocomplete="off" name="q"
-                      placeholder="Buscar" aria-label="Barra de pesquisa">
-                    <button class="desktop-search-submit submit-button" type="submit" aria-label="Buscar">
-                      <div class="desktop-search-icon">
-                        <i class="fas fa-search"></i>
-                      </div>
-                    </button>
-                  </div>
-                </form>
-              </div>
-              <div class="js-search-suggest search-suggest" style="display: none;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">SERAFA STORE</div>
 
-  <div class="js-main-content main-content">
+      <div class="nav-middle">
+        <ul class="nav-links menu-icon">
+          <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+          <li class="dropdown">
+            <a href="#produtos"><i class="fas fa-tshirt"></i> Produtos</a>
+            <ul class="submenu">
+              <li><a href="#camisas-de-time"><i class="fas fa-futbol"></i> Camisas de Time</a></li>
+              <li><a href="#camisetas"><i class="fas fa-tshirt"></i> Camisetas</a></li>
+              <li><a href="#bermudas"><i class="fas fa-shorts"></i> Bermudas</a></li>
+              <li><a href="#agasalhos"><i class="fas fa-jacket"></i> Agasalhos</a></li>
+              <li><a href="#conjuntos"><i class="fas fa-user-friends"></i> Conjuntos</a></li>
+            </ul>
+          </li>
+          <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+          <li><a href="#carrinho"><i class="fas fa-shopping-cart"></i> Carrinho</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <input type="text" placeholder="Buscar" class="search-bar">
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>  </div>
+      </div>
+    </nav>
+
     <section class="banner">
       <div class="banner-container">
-        <img src="img/banner.jpg" alt="Banner da SERAFA STORE" class="banner-image" />
+        <img src="banner.jpg" alt="Banner da SERAFA STORE" />
       </div>
     </section>
 
-    <main>
-      <section id="camisas-de-time" class="produtos">
-        <h2 class="titulo-sessao">Camisas de Time</h2>
-        <div class="produto-container">
-          <div class="produto">
-            <img src="img/Arsenal.jpg" alt="Camisa Arsenal" />
-            <h3>Camisa Arsenal</h3>
-            <p>R$99,90</p>
-            <button onclick="adicionarAoCarrinho('Camisa Arsenal', 99.90)">Adicionar ao Carrinho</button>
-          </div>
-          <div class="produto">
-            <img src="img/AtleticoMadrid.jpg" alt="Camisa Atletico Madrid" />
-            <h3>Camisa Atletico Madrid</h3>
-            <p>R$89,90</p>
-            <button onclick="adicionarAoCarrinho('Camisa Atletico Madrid', 89.90)">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="camisetas" class="produtos">
-        <h2 class="titulo-sessao">Camisetas</h2>
-        <div class="produto-container">
-          <div class="produto">
-            <img src="img/Alemanha.jpg" alt="Camiseta Alemanha" />
-            <h3>Camiseta Alemanha</h3>
-            <p>R$79,90</p>
-            <button onclick="adicionarAoCarrinho('Camiseta Alemanha', 79.90)">Adicionar ao Carrinho</button>
-          </div>
-          <div class="produto">
-            <img src="img/camiseta2.jpg" alt="Camiseta Adidas" />
-            <h3>Camiseta Adidas</h3>
-            <p>R$89,90</p>
-            <button onclick="adicionarAoCarrinho('Camiseta Adidas', 89.90)">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="bermudas" class="produtos">
-        <h2 class="titulo-sessao">Bermudas</h2>
-        <div class="produto-container">
-          <div class="produto">
-            <img src="img/shortnikePeMeG.jpg" alt="Bermuda Nike" class="bermuda-img"/>
-            <h3>Bermuda Nike </h3>
-            <p>R$49,90</p>
-            <button onclick="adicionarAoCarrinho('Bermuda Nike Azul', 49.90)"> Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="agasalhos" class="produtos">
-        <h2 class="titulo-sessao">Agasalhos</h2>
-        <div class="produto-container">
-        </div>
-      </section>
-
-      <section id="conjuntos" class="produtos">
-        <h2 class="titulo-sessao">Conjuntos</h2>
-        <div class="produto-container">
-        </div>
-      </section>
-
-      <section id="carrinho" class="carrinho">
-        <h2>Carrinho de Compras</h2>
-        <ul id="lista-carrinho"></ul>
-        <p>Total: R$ <span id="total">0.00</span></p>
-        <button class="checkout-button">Finalizar Compra</button>
-      </section>
-
-    </main>
-
-    <footer>
-      <div class="social-icons" style="text-align: center; margin-top: 2rem;">
-        <a href="https://wa.me/5511943053076" target="_blank" aria-label="WhatsApp" style="margin: 0 10px;">
-          <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
-        </a>
-        <a href="https://www.instagram.com/serafa_store" target="_blank" aria-label="Instagram" style="margin: 0 10px;">
-          <i class="fab fa-instagram fa-2x" style="color: #e4405f;"></i>
-        </a>
+    <div class="nav-bottom">
+      <div class="nav-info">
+        <i class="fas fa-truck"></i> Enviamos suas compras
       </div>
-    </footer>
-
-    <div class="mobile-nav-container">
-      <button class="mobile-nav-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="mobile-nav-wrapper"> <div class="mobile-nav-top">
-          <a href="/" class="mobile-nav-logo">SERAFA STORE</a>
-          <button class="mobile-nav-close"> <i class="fas fa-times"></i>
-          </button>
-        </div>
-        <ul class="mobile-nav-list">
-          <li class="mobile-nav-item">
-            <a href="/" class="mobile-nav-link">Início</a>
-          </li>
-          <li class="mobile-nav-item has-submenu">
-            <a href="#produtos" class="mobile-nav-link">Produtos
-              <span class="mobile-nav-arrow">
-                <i class="fas fa-chevron-down"></i>
-              </span>
-            </a>
-            <ul class="mobile-nav-submenu">
-              <li class="mobile-nav-submenu-item">
-                <a href="#camisas-de-time" class="mobile-nav-submenu-link">Camisas de Time</a>
-              </li>
-              <li class="mobile-nav-submenu-item">
-                <a href="#camisetas" class="mobile-nav-submenu-link">Camisetas</a>
-              </li>
-              <li class="mobile-nav-submenu-item">
-                <a href="#bermudas" class="mobile-nav-submenu-link">Bermudas</a>
-              </li>
-              <li class="mobile-nav-submenu-item">
-                <a href="#agasalhos" class="mobile-nav-submenu-link">Agasalhos</a>
-              </li>
-              <li class="mobile-nav-submenu-item">
-                <a href="#conjuntos" class="mobile-nav-submenu-link">Conjuntos</a>
-              </li>
-            </ul>
-          </li>
-          <li class="mobile-nav-item">
-            <a href="https://wa.me/5511943053076" class="mobile-nav-link">WhatsApp</a>
-          </li>
-          <li class="mobile-nav-item">
-            <a href="https://www.instagram.com/serafa_store" class="mobile-nav-link">Instagram</a>
-          </li>
-          <div class="mobile-search">
-            <form class="mobile-search-form" action="/search/" method="get" role="form">
-              <div class="form-group">
-                <input class="mobile-search-input form-control" type="search" autocomplete="off" name="q" placeholder="Buscar"
-                  aria-label="Barra de pesquisa">
-                <button class="mobile-search-submit submit-button" type="submit" aria-label="Buscar">
-                  <div class="mobile-search-icon">
-                    <i class="fas fa-search"></i>
-                  </div>
-                </button>
-              </div>
-            </form>
-          </div>
-        </ul>
+      <div class="nav-info">
+        <i class="fas fa-credit-card"></i> Pague como quiser
+      </div>
+      <div class="nav-info">
+        <i class="fas fa-shield-alt"></i> Compre com Segurança
       </div>
     </div>
   </header>
+
+  <main>
+    <section id="produtos" class="produtos">
+      <h2 class="titulo-sessao">Camisas de Time</h2>
+      <div class="produto-container">
+        <div class="produto">
+          <img src="img/Alemanha.jpg" alt="Camisa Alemanha 2025/26" />
+          <h3>Camisa Alemanha 2025/26</h3>
+          <p>R$ 129,90</p>
+          <button onclick="adicionarAoCarrinho('Camisa Alemanha', 129.90)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="produto">
+          <img src="img/Arsenal.jpg" alt="Camisa Arsenal 2025/26">
+          <h3>Camisa Arsenal 2025/26</h3>
+          <p>R$ 129,90</p>
+          <button onclick="adicionarAoCarrinho('Camiseta Arsenal', 129.90)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+          <img src="img/AtleticoMadrid.jpg" alt="Camisa Atletico de Madrid">
+          <h3>Camisa Atletico de Madrid</h3>
+          <p>R$ 129,90</p>
+          <button onclick="adicionarAoCarrinho('Camisa Atletico de Madrid', 129.90)">Adicionar ao Carrinho</button>
+        </div> 
+      </div>
+    </section>
+    
+    <section id="camisetas" class="produtos">
+      <h2 class="titulo-sessao">Camisetas</h2>
+      <div class="produto-container">
+        <div class="produto">
+          <img src="img/camisanikeswooshPeMeGeGG.jpg" alt="Camiseta" />
+          <h3>Camiseta Nike</h3>
+          <p>R$ 89,90</p>
+          <button onclick="adicionarAoCarrinho('Camiseta Nike', 89.90)">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="bermudas" class="produtos">
+      <h2 class="titulo-sessao">Bermudas</h2>
+      <div class="produto-container">
+        <div class="produto">
+          <img src="img/shortnikePeMeG.jpg" alt="Produto 5" />
+          <h3>Bermuda Nike </h3>
+          <p>R$49,90</p>
+          <button onclick="adicionarAoCarrinho('Bermuda Nike Azul', 49.90)"> Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="agasalhos" class="produtos">
+      <h2 class="titulo-sessao">Agasalhos</h2>
+      <div class="produto-container">
+        </div>
+    </section>
+
+    <section id="conjuntos" class="produtos">
+      <h2 class="titulo-sessao">Conjuntos</h2>
+      <div class="produto-container">
+        </div>
+    </section>
+
+    <section id="carrinho" class="carrinho">
+      <h2>Carrinho de Compras</h2>
+      <ul id="lista-carrinho"></ul>
+      <p>Total: R$ <span id="total">0.00</span></p>
+      <button class="checkout-button">Finalizar Compra</button>    
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="social-icons" style="text-align: center; margin-top: 2rem;">
+      <a href="https://wa.me/5511943053076" target="_blank" aria-label="WhatsApp" style="margin: 0 10px;">
+        <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
+      </a>
+      <a href="https://www.instagram.com/e_storeoficial_/" target="_blank" aria-label="Instagram" style="margin: 0 10px;">
+        <i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i>
+      </a>
+    </div>
+    <p style="text-align: center; margin-top: 1rem;">&copy; 2025 SERAFA STORE - Todos os direitos reservados</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
-
 </html>
