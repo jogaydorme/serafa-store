@@ -209,6 +209,30 @@ footer {
   min-height: 320px; /* ou um valor testado para seus conteúdos */
 }
 
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.menu-toggle {
+  display: block;
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+}
+
+
 /* --- Ajuste para imagens dos produtos no desktop --- */
 @media (min-width: 769px) {
   .product img {
