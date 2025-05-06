@@ -6,119 +6,142 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   
-
-  
   <title>SERAFA STORE</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">SERAFA STORE</div>
-    <ul class="nav-links menu-icon">
-      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-      <li class="dropdown">
-        <a href="#produtos"><i class="fas fa-tshirt"></i> Produtos</a>
-        <ul class="submenu">
-          <li><a href="#camisas-de-time"><i class="fas fa-futbol"></i> Camisas de Time</a></li>
-          <li><a href="#camisetas"><i class="fas fa-tshirt"></i> Camisetas</a></li>
-          <li><a href="#bermudas"><i class="fas fa-shorts"></i> Bermudas</a></li>
-          <li><a href="#agasalhos"><i class="fas fa-jacket"></i> Agasalhos</a></li>
-          <li><a href="#conjuntos"><i class="fas fa-user-friends"></i> Conjuntos</a></li>
-        </ul>
-      </li>
-      <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
-      <li><a href="#carrinho"><i class="fas fa-shopping-cart"></i> Carrinho</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">SERAFA STORE</div>
 
-  <section class="banner">
-    <img src="banner.jpg" alt="Banner da SERAFA STORE" />
-  </section>
+      <div class="nav-middle">
+        <ul class="nav-links menu-icon">
+          <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+          <li class="dropdown">
+            <a href="#produtos"><i class="fas fa-tshirt"></i> Produtos</a>
+            <ul class="submenu">
+              <li><a href="#camisas-de-time"><i class="fas fa-futbol"></i> Camisas de Time</a></li>
+              <li><a href="#camisetas"><i class="fas fa-tshirt"></i> Camisetas</a></li>
+              <li><a href="#bermudas"><i class="fas fa-shorts"></i> Bermudas</a></li>
+              <li><a href="#agasalhos"><i class="fas fa-jacket"></i> Agasalhos</a></li>
+              <li><a href="#conjuntos"><i class="fas fa-user-friends"></i> Conjuntos</a></li>
+            </ul>
+          </li>
+          <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+          <li><a href="#carrinho"><i class="fas fa-shopping-cart"></i> Carrinho</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <input type="text" placeholder="Buscar" class="search-bar">
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>  </div>
+      </div>
+    </nav>
+
+    <section class="banner">
+      <div class="banner-container">
+        <img src="banner.jpg" alt="Banner da SERAFA STORE" />
+      </div>
+    </section>
+
+    <div class="nav-bottom">
+      <div class="nav-info">
+        <i class="fas fa-truck"></i> Enviamos suas compras
+      </div>
+      <div class="nav-info">
+        <i class="fas fa-credit-card"></i> Pague como quiser
+      </div>
+      <div class="nav-info">
+        <i class="fas fa-shield-alt"></i> Compre com Segurança
+      </div>
+    </div>
+  </header>
 
   <main>
     <section id="produtos" class="produtos">
       <h2 class="titulo-sessao">Camisas de Time</h2>
-                <!-- ... produtos ... -->
-
+      <div class="produto-container">
         <div class="produto">
           <img src="img/Alemanha.jpg" alt="Camisa Alemanha 2025/26" />
           <h3>Camisa Alemanha 2025/26</h3>
           <p>R$ 129,90</p>
           <button onclick="adicionarAoCarrinho('Camisa Alemanha', 129.90)">Adicionar ao Carrinho</button>
-      </div>
+        </div>
         
-    <div class="produto">
+        <div class="produto">
           <img src="img/Arsenal.jpg" alt="Camisa Arsenal 2025/26">
           <h3>Camisa Arsenal 2025/26</h3>
           <p>R$ 129,90</p>
           <button onclick="adicionarAoCarrinho('Camiseta Arsenal', 129.90)">Adicionar ao Carrinho</button>
-    </div>
+        </div>
 
-    <div class="produto">
-        
+        <div class="produto">
           <img src="img/AtleticoMadrid.jpg" alt="Camisa Atletico de Madrid">
           <h3>Camisa Atletico de Madrid</h3>
           <p>R$ 129,90</p>
           <button onclick="adicionarAoCarrinho('Camisa Atletico de Madrid', 129.90)">Adicionar ao Carrinho</button>
-    </div> 
-</section>
+        </div> 
+      </div>
+    </section>
     
-<section id="camisetas" class="produtos">
-    <h2 class="titulo-sessao";">Camisetas</h2>
-    <div class="produto">
-  <img src="img/camisanikeswooshPeMeGeGG.jpg" alt="Camiseta" />
-  <h3>Camiseta Nike</h3>
-  <p>R$ 89,90</p>
-  <button onclick="adicionarAoCarrinho('Camiseta Nike', 89.90)">Adicionar ao Carrinho</button>
-</div>
-</section>
+    <section id="camisetas" class="produtos">
+      <h2 class="titulo-sessao">Camisetas</h2>
+      <div class="produto-container">
+        <div class="produto">
+          <img src="img/camisanikeswooshPeMeGeGG.jpg" alt="Camiseta" />
+          <h3>Camiseta Nike</h3>
+          <p>R$ 89,90</p>
+          <button onclick="adicionarAoCarrinho('Camiseta Nike', 89.90)">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </section>
 
-<section id="bermudas" class="produtos">
-  <h2 class="titulo-sessao">Bermudas</h2>
-  <div class="produto">
-    <img src="img/shortnikePeMeG.jpg" alt="Produto 5" />
-    <h3>Bermuda Nike </h3>
-    <p>R$49,90</p>
-    <button onclick="adicionarAoCarrinho('Bermuda Nike Azul', 49.90)"> Adicionar ao Carrinho</button>
-  </div>
-  </section>
+    <section id="bermudas" class="produtos">
+      <h2 class="titulo-sessao">Bermudas</h2>
+      <div class="produto-container">
+        <div class="produto">
+          <img src="img/shortnikePeMeG.jpg" alt="Produto 5" />
+          <h3>Bermuda Nike </h3>
+          <p>R$49,90</p>
+          <button onclick="adicionarAoCarrinho('Bermuda Nike Azul', 49.90)"> Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </section>
 
-<section id="agasalhos" class="produtos">
-  <h2>Agasalhos</h2>
-  </section>
+    <section id="agasalhos" class="produtos">
+      <h2 class="titulo-sessao">Agasalhos</h2>
+      <div class="produto-container">
+        </div>
+    </section>
 
-<section id="conjuntos" class="produtos">
-  <h2>Conjuntos</h2>
-  </section>
-    
+    <section id="conjuntos" class="produtos">
+      <h2 class="titulo-sessao">Conjuntos</h2>
+      <div class="produto-container">
+        </div>
+    </section>
 
-
-  <section id="carrinho" class="carrinho">
-    <h2>Carrinho de Compras</h2>
-    <ul id="lista-carrinho"></ul>
-    <p>Total: R$ <span id="total">0.00</span></p>
-    <button class="checkout-button">Finalizar Compra</button>    
-  
-  </section>
+    <section id="carrinho" class="carrinho">
+      <h2>Carrinho de Compras</h2>
+      <ul id="lista-carrinho"></ul>
+      <p>Total: R$ <span id="total">0.00</span></p>
+      <button class="checkout-button">Finalizar Compra</button>    
+    </section>
 
   </main>
 
-
   <footer>
-  <div class="social-icons" style="text-align: center; margin-top: 2rem;">
-    <a href="https://wa.me/5511943053076" target="_blank" aria-label="WhatsApp" style="margin: 0 10px;">
-      <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
-    </a>
-    <a href="https://www.instagram.com/e_storeoficial_/" target="_blank" aria-label="Instagram" style="margin: 0 10px;">
-      <i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i>
-    </a>
-  </div>
-  <p style="text-align: center; margin-top: 1rem;">&copy; 2025 SERAFA STORE - Todos os direitos reservados</p>
-</footer>
-
-
+    <div class="social-icons" style="text-align: center; margin-top: 2rem;">
+      <a href="https://wa.me/5511943053076" target="_blank" aria-label="WhatsApp" style="margin: 0 10px;">
+        <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
+      </a>
+      <a href="https://www.instagram.com/e_storeoficial_/" target="_blank" aria-label="Instagram" style="margin: 0 10px;">
+        <i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i>
+      </a>
+    </div>
+    <p style="text-align: center; margin-top: 1rem;">&copy; 2025 SERAFA STORE - Todos os direitos reservados</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
