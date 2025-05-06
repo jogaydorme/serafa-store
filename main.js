@@ -59,3 +59,14 @@ function checkout() {
   alert("Gerando QR Code do Pix para pagamento...");
   // Aqui você pode integrar com uma API Pix Dinâmico (Opção B)
 }
+
+function toggleMenu() {
+  document.getElementById("menu-mobile").classList.toggle("active");
+}
+
+let carrinho = [];
+
+function adicionarAoCarrinho(produto) {
+  carrinho.push(produto);
+  alert(produto + " foi adicionado ao carrinho!");
+}
