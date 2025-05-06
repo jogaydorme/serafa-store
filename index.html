@@ -39,46 +39,51 @@
 
   <main>
     <section id="produtos" class="produtos">
+      <h2 style="text-align: center;">Camisas de Time</h2>
       <!-- Aqui você pode adicionar seus produtos -->
-      <h2>Camisas de Time</h2>
+      <div class="produto-container"> 
         <div class="produto">
-          <img src="img/Alemanha.jpg" alt="Produto 1" />
+          <img src="img/Alemanha.jpg" alt="Camisa Alemanha 2025/26" />
           <h3>Camisa Alemanha 2025/26</h3>
           <p>R$ 129,90</p>
           <button onclick="adicionarAoCarrinho('Camisa Alemanha', 129.90)">Adicionar ao Carrinho</button>
       </div>
     <div class="produto">
-        <h2>Camisas de Time</h2>
-          <img src="img/Arsenal.jpg" alt="Produto 2">
+          <img src="img/Arsenal.jpg" alt="Camisa Arsenal 2025/26">
           <h3>Camisa Arsenal 2025/26</h3>
           <p>R$ 129,90</p>
           <button onclick="adicionarAoCarrinho('Camiseta Arsenal', 129.90)">Adicionar ao Carrinho</button>
     </div>
 
     <div class="produto">
-        <h2>Camisas de Time</h2>
-          <img src="img/AtleticoMadrid.jpg" alt="Produto 3">
+        
+          <img src="img/AtleticoMadrid.jpg" alt="Camisa Atletico de Madrid">
           <h3>Camisa Atletico de Madrid</h3>
           <p>R$ 129,90</p>
           <button onclick="adicionarAoCarrinho('Camisa Atletico de Madrid', 129.90)">Adicionar ao Carrinho</button>
     </div>
-
-    </section>
+    </div>  
+</section>
     
-    <section id="camisetas" class="produtos">
-  <h2>Camisetas</h2>
-      <div class="produto">
-      <img src="img/camisanikeswooshPeMeGeGG" alt="Camiseta Nike Swoosh" />
+<section id="camisetas">
+    <h2 style="text-align: center;">Camisetas</h2>
+    <div class="produto-container">
+    </div>
+</section>
+    
+    <section id="camisetas" class="Produto 4">
+  <div>
+      <img src="img/camisanikeswooshPeMeGeGG" alt="Produto 4" />
       <h3>Camiseta Nike Swoosh</h3>
       <p>R$ 79,90</p>
-      <button onclick="adicionarAoCarrinho('Camiseta Nike Swoosh', 49.90)">Adicionar ao Carrinho</button>
+      <button onclick="adicionarAoCarrinho('Camiseta Nike Swoosh', 79.90)">Adicionar ao Carrinho</button>
   </div>
   </section>
-shortnikep&m&g
+
 <section id="bermudas" class="produtos">
   <h2>Bermudas</h2>
   <div class="produto">
-    <img src="img/shortnikePeMeG" alt="Bermuda Nike" />
+    <img src="img/shortnikePeMeG" alt="Produto 5" />
     <h3>Bermuda Nike </h3>
     <p>R$49,90</p>
     <button onclick="adicionarAoCarrinho('Bermuda Nike Azul', 49.90)"> Adicionar ao Carrinho</button>
@@ -92,15 +97,18 @@ shortnikep&m&g
   <h2>Conjuntos</h2>
   </section>
     
-  
-  </main>
+
 
   <section id="carrinho" class="carrinho">
     <h2>Carrinho de Compras</h2>
     <ul id="lista-carrinho"></ul>
     <p>Total: R$ <span id="total">0.00</span></p>
     <button onclick="finalizarCompra()">Finalizar Compra</button>
+  
   </section>
+
+  </main>
+
 
   <footer>
   <div class="social-icons" style="text-align: center; margin-top: 2rem;">
