@@ -4,11 +4,12 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+
 body {
-  font-family: Arial, sans-serif;
-  background: #fff
+  background: #fff;
   color: #111;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -34,52 +35,27 @@ body {
   font-weight: 500;
 }
 
-header {
-  background: #111;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.menu-btn {
+.menu-toggle {
   display: none;
   background: none;
   border: none;
   color: white;
   font-size: 1.5rem;
 }
-.menu-toggle {
-  background: none;
-  color: #fff;
-  font-size: 24px;
-  border: none;
-  display: none;
-}
+
 .banner {
   position: relative;
   text-align: center;
-  color:#fff;
   background: #eee;
 }
+
 .banner img {
   width: 100%;
-  max-height: 200px;
+  max-height: 300px;
   object-fit: cover;
 }
 
-.texto-banner {
+.banner-text {
   position: absolute;
   top: 20%;
   left: 10%;
@@ -88,15 +64,17 @@ nav ul li a {
   z-index: 2;
 }
 
-.texto-banner h1 {
+.banner-text h1 {
   font-size: 3rem;
   font-weight: 700;
 }
-.texto-banner p {
+
+.banner-text p {
   font-size: 1.5rem;
   color: #f7b500;
+}
 
-.banner-content .btn {
+.cta {
   display: inline-block;
   background: #f7b500;
   color: black;
@@ -106,22 +84,13 @@ nav ul li a {
   font-weight: bold;
   border-radius: 4px;
   transition: background 0.3s ease;
+}
 
-  .banner-content .btn:hover {
+.cta:hover {
   background: #e0a100;
-
 }
 
-.cta {
-  margin-top: 20px;
-  padding: 10px 25px;
-  background-color: #ffcc00;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-}
-.categorias {
+.categories {
   display: flex;
   justify-content: space-around;
   padding: 2rem 1rem;
@@ -129,54 +98,54 @@ nav ul li a {
   flex-wrap: wrap;
 }
 
-  .feature-box {
+.category {
   width: 30%;
   margin: 1rem 0;
 }
-  
-.categoria img {
+
+.category img {
   width: 100%;
   border-radius: 6px;
 }
-.favoritos {
+
+.favorites {
   padding: 2rem 1rem;
   text-align: center;
 }
-  
-.favoritos h2 {
+
+.favorites h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-  
-.produtos {
+
+.products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
 }
 
-.produto {
+.product {
   background: #f8f8f8;
   padding: 1rem;
   border-radius: 6px;
 }
-  
-.produto img {
+
+.product img {
   width: 100%;
   border-radius: 6px;
 }
-  
-.produto h4 {
-  margin-top: 0.5rem 0;
-}
-.carrinho {
+
+.cart {
   padding: 1rem;
   background: #eee;
 }
-  
-.carrinho ul {
+
+.cart ul {
   list-style: none;
+  margin-bottom: 1rem;
 }
-.carrinho button {
+
+.cart button {
   background: green;
   color: white;
   padding: 0.6rem 1.2rem;
@@ -184,7 +153,7 @@ nav ul li a {
   margin-top: 1rem;
   border-radius: 4px;
 }
-  
+
 footer {
   background: #111;
   color: #fff;
@@ -192,8 +161,9 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
 @media (max-width: 768px) {
-  nav ul {
+  .nav-links {
     display: none;
     flex-direction: column;
     background-color: #111;
@@ -203,10 +173,12 @@ footer {
     padding: 1rem;
     border-radius: 6px;
   }
+
   .menu-toggle {
     display: block;
   }
-  nav.active ul {
+
+  .nav-links.active {
     display: flex;
   }
 }
