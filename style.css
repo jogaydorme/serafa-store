@@ -257,10 +257,3 @@ body {
   border-radius: 12px;
 }
 
-.produtos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
