@@ -182,3 +182,38 @@ footer {
     display: flex;
   }
 }
+
+/* --- Ajuste para imagens dos produtos no desktop --- */
+@media (min-width: 769px) {
+  .product img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .category img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* --- Estilo para o botão "SHOP NOW" nas categorias --- */
+.category a {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.category a:hover {
+  background-color: #333;
+  border-color: #fff;
+}
