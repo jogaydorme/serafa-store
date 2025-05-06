@@ -70,6 +70,21 @@ const navLinks = document.getElementById("nav-links");
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+function toggleCart() {
+  const cartBox = document.getElementById("cart-box");
+  cartBox.classList.toggle("active");
+}
+
+function addToCart(product, price = 0) {
+  cart.push({ product, price });
+  updateCart();
+  updateCartCount();
+}
+
+function updateCartCount() {
+  const count = document.getElementById("cart-count");
+  count.textContent = cart.length;
+}
 
 // Inicializa
 renderProducts();
