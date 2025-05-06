@@ -92,16 +92,16 @@
         <h2 class="titulo-sessao">Camisas de Time</h2>
         <div class="produto-container">
           <div class="produto">
-            <img src="img/camisa1.jpg" alt="Produto 1" />
-            <h3>Camisa São Paulo</h3>
+            <img src="img/Arsenal.jpg" alt="Camisa Arsenal" />
+            <h3>Camisa Arsenal</h3>
             <p>R$99,90</p>
-            <button onclick="adicionarAoCarrinho('Camisa São Paulo', 99.90)">Adicionar ao Carrinho</button>
+            <button onclick="adicionarAoCarrinho('Camisa Arsenal', 99.90)">Adicionar ao Carrinho</button>
           </div>
           <div class="produto">
-            <img src="img/camisa2.jpg" alt="Produto 2" />
-            <h3>Camisa Corinthians</h3>
+            <img src="img/AtleticoMadrid.jpg" alt="Camisa Atletico Madrid" />
+            <h3>Camisa Atletico Madrid</h3>
             <p>R$89,90</p>
-            <button onclick="adicionarAoCarrinho('Camisa Corinthians', 89.90)">Adicionar ao Carrinho</button>
+            <button onclick="adicionarAoCarrinho('Camisa Atletico Madrid', 89.90)">Adicionar ao Carrinho</button>
           </div>
         </div>
       </section>
@@ -110,13 +110,13 @@
         <h2 class="titulo-sessao">Camisetas</h2>
         <div class="produto-container">
           <div class="produto">
-            <img src="img/camiseta1.jpg" alt="Produto 3" />
-            <h3>Camiseta Nike</h3>
+            <img src="img/Alemanha.jpg" alt="Camiseta Alemanha" />
+            <h3>Camiseta Alemanha</h3>
             <p>R$79,90</p>
-            <button onclick="adicionarAoCarrinho('Camiseta Nike', 79.90)">Adicionar ao Carrinho</button>
+            <button onclick="adicionarAoCarrinho('Camiseta Alemanha', 79.90)">Adicionar ao Carrinho</button>
           </div>
           <div class="produto">
-            <img src="img/camiseta2.jpg" alt="Produto 4" />
+            <img src="img/camiseta2.jpg" alt="Camiseta Adidas" />
             <h3>Camiseta Adidas</h3>
             <p>R$89,90</p>
             <button onclick="adicionarAoCarrinho('Camiseta Adidas', 89.90)">Adicionar ao Carrinho</button>
@@ -128,7 +128,7 @@
         <h2 class="titulo-sessao">Bermudas</h2>
         <div class="produto-container">
           <div class="produto">
-            <img src="img/shortnikePeMeG.jpg" alt="Produto 5" />
+            <img src="img/shortnikePeMeG.jpg" alt="Bermuda Nike" class="bermuda-img"/>
             <h3>Bermuda Nike </h3>
             <p>R$49,90</p>
             <button onclick="adicionarAoCarrinho('Bermuda Nike Azul', 49.90)"> Adicionar ao Carrinho</button>
@@ -211,20 +211,20 @@
           <li class="mobile-nav-item">
             <a href="https://www.instagram.com/serafa_store" class="mobile-nav-link">Instagram</a>
           </li>
+          <div class="mobile-search">
+            <form class="mobile-search-form" action="/search/" method="get" role="form">
+              <div class="form-group">
+                <input class="mobile-search-input form-control" type="search" autocomplete="off" name="q" placeholder="Buscar"
+                  aria-label="Barra de pesquisa">
+                <button class="mobile-search-submit submit-button" type="submit" aria-label="Buscar">
+                  <div class="mobile-search-icon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
         </ul>
-        <div class="mobile-search">
-          <form class="mobile-search-form" action="/search/" method="get" role="form">
-            <div class="form-group">
-              <input class="mobile-search-input form-control" type="search" autocomplete="off" name="q" placeholder="Buscar"
-                aria-label="Barra de pesquisa">
-              <button class="mobile-search-submit submit-button" type="submit" aria-label="Buscar">
-                <div class="mobile-search-icon">
-                  <i class="fas fa-search"></i>
-                </div>
-              </button>
-            </div>
-          </form>
-        </div>
       </div>
     </div>
   </header>
