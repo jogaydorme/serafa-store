@@ -31,10 +31,9 @@ body {
 .produtos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
   margin-bottom: 4rem;
-  text-align: center;
+  
 }
 
 
@@ -152,9 +151,10 @@ footer {
 .produto-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Centraliza os produtos na linha */
+  justify-content: center; /* Centraliza os produtos na linha */
   gap: 2rem; /* Espaçamento entre os produtos */
   padding: 2rem; /* Espaçamento ao redor dos produtos */
+  width: 100%; /*Garante que o container ocupe a largura total */
 }
 
 .produto {
@@ -162,14 +162,13 @@ footer {
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
-  max-width: 220px; /* Largura máxima de cada produto */
+  max-width: 220px;
   background: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
   margin-bottom: 2rem; /* Espaçamento entre as linhas de produtos */
-  align-items: center;
-  flex-direction: column;
-}
+  
+} /* Largura máxima de cada produto */
 
 /* Se quiser centralizar os títulos das categorias via CSS */
 h2 {
