@@ -111,3 +111,78 @@ body {
 .desktop-search-submit {
   background: none;
   border: none;
+  cursor: pointer;
+  /* ... */
+}
+
+.desktop-search-icon {
+  /* ... */
+}
+
+.js-search-suggest {
+  /* ... */
+}
+
+/* Banner */
+.banner {
+  /* Estilos para a section.banner, se necessário */
+  text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.banner-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+  object-fit: cover;
+}
+
+/* Produtos */
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.produto {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+}
+
+.produto img {
+  width: 100%;
+  max-height: 200px; /* Altura máxima para as imagens dos produtos */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Bermuda Image */
+.bermuda-img {
+  max-height: 300px; /* Ajuste a altura conforme necessário */
+}
+
+/* Carrinho */
+.carrinho {
+  /* ... */
+}
+
+/* Footer */
+footer {
