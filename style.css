@@ -255,3 +255,10 @@ body {
   margin: 0 auto; /* centraliza */
   border-radius: 12px;
 }
+
+.titulo-sessao {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 40px 0 20px;
+}
