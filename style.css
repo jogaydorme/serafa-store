@@ -124,11 +124,15 @@ footer {
 }
 
 .menu-icon a i {
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  color: white; /* Cor inicial */
+  transition: transform 0.2s ease-in-out; /* Transição mais rápida */
 }
 
 .menu-icon a:hover i {
-  transform: scale(1.1); /* Aumenta um pouco o tamanho */
-  color: #f0c14b; /* Muda a cor ao passar o mouse */
+  transform: scale(1.1); /* Ligeiro aumento */
+  transition: transform 0.1s ease-in-out 0s, /* Rápido para aumentar */
+              scale 0.1s ease-in-out 0.1s; /* Rápido para voltar */
+}
+
+.menu-icon a:active i { /* Opcional: Feedback ao clicar */
+  transform: scale(0.9);
 }
