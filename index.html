@@ -1,193 +1,192 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <title>SERAFA STORE</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Streetwear Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #f9f9f9;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .hero p {
+      color: #ffc107;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #ffc107;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .categories, .favorites {
+      padding: 1.5rem 1rem;
+    }
+
+    .categories h3, .favorites h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .category-grid, .favorites-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #f3f3f3;
+      padding: 0.5rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h4 {
+      margin: 0.5rem 0 0.25rem;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding: 3rem 2rem;
+      }
+
+      .hero h2 {
+        font-size: 3rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">SERAFA STORE</div>
+  <header>
+    <h1>STREETWEAR</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-            <div class="nav-middle">
-                <ul class="nav-links menu-icon">
-                    <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
-                    <li class="dropdown">
-                        <a href="#produtos"><i class="fas fa-tshirt"></i> Produtos</a>
-                        <ul class="submenu">
-                            <li><a href="#camisas-de-time"><i class="fas fa-futbol"></i> Camisas de Time</a></li>
-                            <li><a href="#camisetas"><i class="fas fa-tshirt"></i> Camisetas</a></li>
-                            <li><a href="#bermudas"><i class="fas fa-shorts"></i> Bermudas</a></li>
-                            <li><a href="#agasalhos"><i class="fas fa-jacket"></i> Agasalhos</a></li>
-                            <li><a href="#conjuntos"><i class="fas fa-user-friends"></i> Conjuntos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
-                    <li><a href="#carrinho"><i class="fas fa-shopping-cart"></i> Carrinho</a></li>
-                </ul>
-            </div>
+  <section class="hero">
+    <img src="https://via.placeholder.com/500x300" alt="Hero Model" />
+    <h2>STYLE</h2>
+    <p>LATEST TRENDS</p>
+    <a href="#" class="btn-primary">Shop Now</a>
+  </section>
 
-            <div class="nav-right">
-                <div class="search-container">
-                    <input type="text" placeholder="Buscar" class="search-bar">
-                </div>
-                <div class="cart-container">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                    <span class="cart-total">R$0,00</span>
-                </div>
-            </div>
-        </nav>
-
-        <section class="banner">
-            <div class="banner-container">
-                <img src="img/banner.jpg" alt="Banner da SERAFA STORE" class="banner-image" />
-            </div>
-        </section>
-
-        </div>
-    </header>
-
-    <main>
-        <section id="produtos" class="produtos">
-            <h2 class="titulo-sessao">Camisas de Time</h2>
-            <div class="produto-container">
-                <div class="produto">
-                    <img src="img/Arsenal.jpg" alt="Produto 1" />
-                    <h3>Camisa Arsenal</h3>
-                    <p>R$129,90</p>
-                    <button onclick="adicionarAoCarrinho('Camisa Arsenal', 129.90)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="produto">
-                    <img src="img/AtleticoMadrid.jpg" alt="Produto 2" />
-                    <h3>Camisa Atletico Madrid</h3>
-                    <p>R$129,90</p>
-                    <button onclick="adicionarAoCarrinho('Camisa Atletico Madrid', 129.90)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="produto">
-                    <img src="img/Alemanha.jpg" alt="Produto 3" />
-                    <h3>Camiseta Alemanha</h3>
-                    <p>R$129,90</p>
-                    <button onclick="adicionarAoCarrinho('Camiseta Alemanha', 129.90)">Adicionar ao Carrinho</button>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="camisetas" class="produtos">
-            <h2 class="titulo-sessao">Camisetas</h2>
-            <div class="produto-container">
-                
-                <div class="produto">
-                    <img src="img/camisanikeswooshPeMeGeGG.jpg" alt="Produto 4" />
-                    <h3>Camiseta Nike</h3>
-                    <p>R$79,90</p>
-                    <button onclick="adicionarAoCarrinho('Camiseta Nike', 79.90)">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="bermudas" class="produtos">
-            <h2 class="titulo-sessao">Bermudas</h2>
-            <div class="produto-container">
-                <div class="produto">
-                    <img src="img/shortnikePeMeG.jpg" alt="Produto 5" />
-                    <h3>Bermuda Nike </h3>
-                    <p>R$49,90</p>
-                    <button onclick="adicionarAoCarrinho('Bermuda Nike Azul', 49.90)"> Adicionar ao Carrinho</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="agasalhos" class="produtos">
-            <h2 class="titulo-sessao">Agasalhos</h2>
-            <div class="produto-container">
-            </div>
-        </section>
-
-        <section id="conjuntos" class="produtos">
-            <h2 class="titulo-sessao">Conjuntos</h2>
-            <div class="produto-container">
-            </div>
-        </section>
-
-        <section id="carrinho" class="carrinho">
-            <h2>Carrinho de Compras</h2>
-            <ul id="lista-carrinho"></ul>
-            <p>Total: R$ <span id="total">0.00</span></p>
-            <button class="checkout-button">Finalizar Compra</button>
-        </section>
-
-    </main>
-
-    <div class="mobile-nav-container">
-        <button class="mobile-nav-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="mobile-nav-wrapper">
-            <div class="mobile-nav-top">
-                <a href="/" class="mobile-nav-logo">SERAFA STORE</a>
-                <button class="mobile-nav-close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <ul class="mobile-nav-list">
-                <li class="mobile-nav-item">
-                    <a href="/" class="mobile-nav-link">Início</a>
-                </li>
-                <li class="mobile-nav-item has-submenu">
-                    <a href="#produtos" class="mobile-nav-link">Produtos
-                        <span class="mobile-nav-arrow">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </a>
-                    <ul class="mobile-nav-submenu">
-                        <li class="mobile-nav-submenu-item">
-                            <a href="#camisas-de-time" class="mobile-nav-submenu-link">Camisas de Time</a>
-                        </li>
-                        <li class="mobile-nav-submenu-item">
-                            <a href="#camisetas" class="mobile-nav-submenu-link">Camisetas</a>
-                        </li>
-                        <li class="mobile-nav-submenu-item">
-                            <a href="#bermudas" class="mobile-nav-submenu-link">Bermudas</a>
-                        </li>
-                        <li class="mobile-nav-submenu-item">
-                            <a href="#agasalhos" class="mobile-nav-submenu-link">Agasalhos</a>
-                        </li>
-                        <li class="mobile-nav-submenu-item">
-                            <a href="#conjuntos" class="mobile-nav-submenu-link">Conjuntos</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="https://wa.me/5511943053076" class="mobile-nav-link">WhatsApp</a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="https://www.instagram.com/serafa_store" class="mobile-nav-link">Instagram</a>
-                </li>
-                <div class="mobile-search">
-                    <form class="mobile-search-form" action="/search/" method="get" role="form">
-                        <div class="form-group">
-                            <input class="mobile-search-input form-control" type="search" autocomplete="off" name="q"
-                                placeholder="Buscar" aria-label="Barra de pesquisa">
-                            <button class="mobile-search-submit submit-button" type="submit" aria-label="Buscar">
-                                <div class="mobile-search-icon">
-                                    <i class="fas fa-search"></i>
-                                </div>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </ul>
-        </div>
+  <section class="categories">
+    <h3>Explore</h3>
+    <div class="category-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x200" alt="New Arrivals" />
+        <h4>NEW ARRIVALS</h4>
+        <p>Shop Now</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x200" alt="Sale" />
+        <h4>SALE</h4>
+        <p>Up to 80% Off</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x200" alt="Hoodies" />
+        <h4>HOODIES</h4>
+        <p>Shop Now</p>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
+  </section>
 
+  <section class="favorites">
+    <h3>Our Favorites</h3>
+    <div class="favorites-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x200" alt="Look 1" />
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x200" alt="Look 2" />
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x200" alt="Look 3" />
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x200" alt="Look 4" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Streetwear. All rights reserved.
+  </footer>
+</body>
 </html>
+
