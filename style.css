@@ -36,6 +36,8 @@ body {
   max-width: 1200px; /* Ajuste conforme necessário */
   margin: 0 auto;
   padding: 0 1rem;
+  max-height: 600px; /*Altura padrao para desktop */
+  overflow: hidden;
 }
 
 .banner img {
@@ -43,6 +45,21 @@ body {
   height: auto;
   display: block;
   margin: 0;
+  object-fit: cover;
+}
+
+/* Media Query para telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+  .banner-container {
+    max-height: 300px; /* Altura menor para telas menores */
+  }
+}
+
+/* Media Query para celulares ainda menores */
+@media (max-width: 480px) {
+  .banner-container {
+    max-height: 200px; /* Altura ainda menor para celulares */
+  }
 }
 
 .nav-bottom {
