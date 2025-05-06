@@ -164,9 +164,9 @@ button {
   cursor: pointer;
   font-weight: bold;
   transition: transform 0.3s ease;
-  animation: pulse 2.5s infinite;
 }
 
 button:hover {
   background-color: #333;
+  animation: pulse 0.6s;
 }
