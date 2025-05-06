@@ -25,6 +25,12 @@ function updateCart() {
   total.textContent = `Total: R$ ${sum.toFixed(2)}`;
 }
 
+function checkoutPix() {
+  const total = cart.reduce((acc, item) => acc + item.price, 0);
+  const pixElement = document.getElementById('pix-qrcode');
+  pixElement.innerHTML = `<p>QR Code gerado para o valor de R$ ${total.toFixed(2)}</p><img src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Pix+Pagamento+R$+${total.toFixed(2)}' alt='Pix QR Code' />`;
+}
+
 function checkout() {
   alert("Gerando QR Code Pix para pagamento...");
 }
