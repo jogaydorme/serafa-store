@@ -1,41 +1,76 @@
-<script>
+const products = [
+  {
+    id: 1,
+    name: "Camiseta Oversized",
+    image: "images/produto1.jpg",
+    price: 79.90,
+  },
+  {
+    id: 2,
+    name: "Moletom com Zíper",
+    image: "images/produto2.jpg",
+    price: 149.90,
+  },
+  {
+    id: 3,
+    name: "Calça Cargo",
+    image: "images/produto3.jpg",
+    price: 129.90,
+  },
+];
+
+const productList = document.getElementById("product-list");
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+const cartSection = document.getElementById("cart");
+const checkoutBtn = document.getElementById("checkout-btn");
 let cart = [];
 
-function toggleMenu() {
-  const nav = document.getElementById("nav-links");
-  nav.classList.toggle("active");
+function renderProducts() {
+  productList.innerHTML = "";
+  products.forEach((product) => {
+    const div = document.createElement("div");
+    div.classList.add("product");
+    div.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p>R$ ${product.price.toFixed(2)}</p>
+      <button onclick="addToCart(${product.id})">ADD</button>
+    `;
+    productList.appendChild(div);
+  });
 }
 
-function addToCart(product, price = 0) {
-  cart.push({ product, price });
+function addToCart(productId) {
+  const product = products.find((p) => p.id === productId);
+  cart.push(product);
   updateCart();
 }
 
 function updateCart() {
-  const list = document.getElementById("cart-items");
-  const total = document.getElementById("cart-total");
-  list.innerHTML = '';
-  let sum = 0;
-  cart.forEach(item => {
+  cartItems.innerHTML = "";
+  let total = 0;
+  cart.forEach((item) => {
     const li = document.createElement("li");
-    li.textContent = `${item.product} - R$ ${item.price.toFixed(2)}`;
-    list.appendChild(li);
-    sum += item.price;
+    li.textContent = `${item.name} - R$ ${item.price.toFixed(2)}`;
+    cartItems.appendChild(li);
+    total += item.price;
   });
-  total.textContent = `Total: R$ ${sum.toFixed(2)}`;
+  cartTotal.textContent = total.toFixed(2);
+  cartSection.style.display = "block";
 }
 
-function checkoutPix() {
-  const total = cart.reduce((acc, item) => acc + item.price, 0);
-  const pixElement = document.getElementById('pix-qrcode');
-  pixElement.innerHTML = `<p>QR Code gerado para o valor de R$ ${total.toFixed(2)}</p><img src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Pix+Pagamento+R$+${total.toFixed(2)}' alt='Pix QR Code' />`;
-}
+checkoutBtn.addEventListener("click", () => {
+  alert("Checkout via Pix será implementado aqui.");
+});
 
-function checkout() {
-  alert("Gerando QR Code Pix para pagamento...");
-}
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-function shopNow(product = "Item Shop Now", price = 99.90) {
-  addToCart(product, price);
-}
-</script>
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Inicializa
+renderProducts();
+
