@@ -4,103 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SERAFA STORE</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      color: #222;
-    }
-    header {
-      background-color: #000;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header img {
-      height: 50px;
-    }
-    nav a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .banner {
-      background: url('banner.jpg') no-repeat center center/cover;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 48px;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .section h2 {
-      margin-bottom: 40px;
-      font-size: 32px;
-    }
-    .products {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    .product {
-      width: 250px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .product img {
-      width: 100%;
-      height: auto;
-    }
-    .product h3 {
-      margin: 10px;
-      font-size: 18px;
-    }
-    .product p {
-      color: #555;
-      font-size: 16px;
-    }
-    footer {
-      background-color: #000;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <img src="serafa-logo.png" alt="SERAFA STORE Logo" />
+    <div class="logo">SERAFA STORE</div>
     <nav>
-      <a href="#">Início</a>
-      <a href="#">Masculino</a>
-      <a href="#">Feminino</a>
-      <a href="#">Promoções</a>
-      <a href="#">Contato</a>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
     </nav>
+    <div class="cart-icon" onclick="toggleCart()">🛒 (<span id="cart-count">0</span>)</div>
   </header>
 
-  <div class="banner">
-    SERAFA STORE
-  </div>
+  <section class="banner">
+    <img src="images/banner.jpg" alt="Banner da SERAFA STORE">
+  </section>
 
-  <div class="section">
-    <h2>Destaques</h2>
-    <div class="products">
-      <div class="product">
-        <img src="produto1.jpg" alt="Produto 1">
-        <h3>Camisa Oversized</h3>
-        <p>R$ 89,90</p>
-      </div>
-      <div cl
+  <main class="products">
+    <!-- Exemplo de produto -->
+    <div class="product">
+      <img src="images/produto1.jpg" alt="Produto 1">
+      <h3>Camiseta Oversized</h3>
+      <p>R$ 89,90</p>
+      <button onclick="addToCart('Camiseta Oversized', 89.90)">Adicionar ao carrinho</button>
+    </div>
+    <!-- Adicione mais produtos conforme necessário -->
+  </main>
+
+  <aside class="cart" id="cart">
+    <h2>Seu carrinho</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: R$ <span id="cart-total">0.00</span></p>
+    <button onclick="checkout()">Finalizar compra</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
