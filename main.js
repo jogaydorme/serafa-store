@@ -32,3 +32,30 @@ function checkoutPix() {
   const pixElement = document.getElementById('pix-qrcode');
   pixElement.innerHTML = `<p>QR Code gerado para o valor de R$ ${total.toFixed(2)}</p><img src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Pix+Pagamento+R$+${total.toFixed(2)}' alt='Pix QR Code' />`;
 }
+
+function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+
+const cart = [];
+
+function addToCart(item) {
+  cart.push(item);
+  updateCart();
+}
+
+function updateCart() {
+  const list = document.getElementById("cart-items");
+  list.innerHTML = "";
+  cart.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = `${item} `;
+    list.appendChild(li);
+  });
+}
+
+function checkout() {
+  alert("Gerando QR Code do Pix para pagamento...");
+  // Aqui você pode integrar com uma API Pix Dinâmico (Opção B)
+}
