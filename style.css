@@ -48,7 +48,7 @@ body {
     overflow: hidden; /* Garante que a imagem não ultrapasse */
 }
 
-.banner-image {
+.banner-img {
     width: 100%; /* Ocupa toda a largura do container */
     height: auto;
     display: block;
