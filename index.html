@@ -2,44 +2,49 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SERAFA STORE</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">SERAFA STORE</div>
-    <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Contato</a></li>
+    <nav class="navbar">
+      <div class="logo">SERAFA STORE</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#carrinho">Carrinho</a></li>
       </ul>
     </nav>
-    <div class="cart-icon" onclick="toggleCart()">🛒 (<span id="cart-count">0</span>)</div>
   </header>
 
   <section class="banner">
-    <img src="images/banner.jpg" alt="Banner da SERAFA STORE">
+    <img src="images/banner.jpg" alt="Banner da SERAFA STORE" class="banner-img" />
   </section>
 
-  <main class="products">
-    <!-- Exemplo de produto -->
-    <div class="product">
-      <img src="images/produto1.jpg" alt="Produto 1">
-      <h3>Camiseta Oversized</h3>
-      <p>R$ 89,90</p>
-      <button onclick="addToCart('Camiseta Oversized', 89.90)">Adicionar ao carrinho</button>
-    </div>
-    <!-- Adicione mais produtos conforme necessário -->
+  <main>
+    <section id="produtos" class="produtos">
+      <!-- Aqui você pode adicionar seus produtos -->
+      <div class="produto">
+        <img src="images/produto1.jpg" alt="Produto 1" />
+        <h3>Camiseta Oversized</h3>
+        <p>R$ 99,90</p>
+        <button onclick="adicionarAoCarrinho('Camiseta Oversized', 99.90)">Adicionar ao Carrinho</button>
+      </div>
+    </section>
   </main>
 
-  <aside class="cart" id="cart">
-    <h2>Seu carrinho</h2>
-    <ul id="cart-items"></ul>
-    <p>Total: R$ <span id="cart-total">0.00</span></p>
-    <button onclick="checkout()">Finalizar compra</button>
-  </aside>
+  <section id="carrinho" class="carrinho">
+    <h2>Carrinho de Compras</h2>
+    <ul id="lista-carrinho"></ul>
+    <p>Total: R$ <span id="total">0.00</span></p>
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SERAFA STORE - Todos os direitos reservados</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
