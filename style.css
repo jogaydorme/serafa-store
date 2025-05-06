@@ -128,3 +128,14 @@ footer {
   transform: scale(1.2);
   color: #25D366; /* verde do WhatsApp ou roxo se quiser pro Insta */
 }
+
+.social-icons a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
