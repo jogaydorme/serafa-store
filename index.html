@@ -26,7 +26,7 @@
     <div class="banner-text">
       <h1>STYLE</h1>
       <p>LATEST TRENDS</p>
-      <a href="#" class="cta" onclick="shopNow()">SHOP NOW</a>
+      <a href="#" class="cta" onclick="shopNow('Oferta Especial')">COMPRE AGORA</a>
     </div>
   </section>
 
@@ -56,7 +56,7 @@
       <div class="product">
         <img src="imgs/PalmeirasB.jpeg" alt="Product 1" />
         <h4>Casual Cap</h4>
-        <button onclick="addToCart('Casual Cap', 59.90)">Add</button>
+        <button onclick="addToCart('Casual Cap', 59.90)">ADD</button>
       </div>
       <div class="product">
         <img src="imgs/WhatsApp Image 2025-05-03 at 4.52.31 PM.jpeg" alt="Product 2" />
@@ -72,13 +72,12 @@
   </section>
 
   <!-- Cart -->
-  <section class="cart">
-    <h3>Cart</h3>
-    <ul id="cart-items"></ul>
-    <p id="cart-total">Total: R$ 0.00</p>
-    <button onclick="checkoutPix()">Checkout via Pix</button>
-    <div id="pix-qrcode"></div>
-  </section>
+  <section class="carrinho">
+  <h3>Carrinho</h3>
+  <ul id="cart-items"></ul>
+  <p id="cart-total">Total: R$ 0,00</p>
+  <button onclick="checkout()">Finalizar Compra (Pix)</button>
+</section>
 
  <footer>
   <p>&copy; 2025 SERAFA STORE. Todos os direitos reservados.</p>
