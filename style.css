@@ -52,6 +52,9 @@ body {
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
+   
+  /* ... outras propriedades do produto ... */
+  min-width: 240px; /* Aumenta ligeiramente a largura mínima do produto */
 }
 
 .banner img {
@@ -75,6 +78,10 @@ button:hover {
   background-color: #333;
   animation: pulse 0.6s;
   transform: scale(1.05); /* Adicionei um pequeno aumento de escala junto com a animação */
+  
+  /* ... outras propriedades do botão ... */
+  font-size: 0.9rem; /* Diminui ligeiramente o tamanho da fonte */
+  padding: 0.7rem 1rem; /* Ajusta o padding para compensar a menor fonte */
 }
 
 footer {
