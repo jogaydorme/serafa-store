@@ -1,0 +1,80 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #000;
+  color: #fff;
+}
+
+.nav-links a {
+  margin: 0 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-toggle {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.banner {
+  background: url('../imgs/banner.png') no-repeat center center/cover;
+  height: 80vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.banner h2 {
+  color: gold;
+}
+
+.banner button {
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  background-color: gold;
+  border: none;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.products-section {
+  padding: 2em;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 1em;
+  width: 200px;
+}
+
+.cart-section {
+  padding: 2em;
+}
