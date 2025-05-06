@@ -33,7 +33,7 @@ body {
 }
 
 .banner-container {
-  max-width: 1200px; /* Ajuste conforme necessário */
+  max-width: 1170px; /* Largura do banner da */
   margin: 0 auto;
   padding: 0 1rem;
   max-height: 600px; /*Altura padrao para desktop */
@@ -41,7 +41,7 @@ body {
 }
 
 .banner img {
-  width: 100%;
+  width: 100%; /*Ocupa toda a largura do container */
   height: auto;
   display: block;
   margin: 0;
