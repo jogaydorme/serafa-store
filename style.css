@@ -180,3 +180,33 @@ h2 {
   margin-top: 2rem; /* Espaçamento acima do título */
   margin-bottom: 2rem; /* Espaçamento abaixo do título */
 }
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #000;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.checkout-button:hover {
+  background-color: #333;
+}
