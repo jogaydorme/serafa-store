@@ -118,6 +118,40 @@ footer {
   transition: transform 0.1s ease-in-out 0s, /* Rápido para aumentar */            
 }
 
+.dropdown {
+  position: relative; /* Necessário para posicionar o submenu */
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%; /* Posiciona abaixo do link "Produtos" */
+  left: 0;
+  background-color: #000; /* Cor de fundo do submenu */
+  width: auto; /* Largura automática para caber o conteúdo */
+  min-width: 150px; /* Largura mínima para os itens do submenu */
+  z-index: 10; /* Garante que o submenu fique acima de outros elementos */
+  display: none; /* Esconde o submenu por padrão */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
+
+.dropdown:hover .submenu {
+  display: block; /* Mostra o submenu ao passar o mouse no "Produtos" */
+}
+
+.submenu li a {
+  color: white;
+  padding: 0.8rem 1.2rem;
+  display: block; /* Faz os links do submenu ocuparem a largura total */
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #333; /* Cor de fundo ao passar o mouse nos itens do submenu */
+}
+
 .menu-icon a:active i { /* Opcional: Feedback ao clicar */
   transform: scale(0.9);
 }
