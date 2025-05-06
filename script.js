@@ -22,3 +22,19 @@ $(document).ready(function () {
 
   $('#cart-count').text(cart.length);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function () {
+      const name = this.parentElement.querySelector('h4').innerText;
+      const image = this.parentElement.querySelector('img').src;
+      const price = 149.90;
+
+      cart.push({ name, image, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Produto adicionado ao carrinho!");
+    });
+  });
+});
