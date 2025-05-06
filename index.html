@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,19 +11,13 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">SERAFA STORE</div>
-    <nav id="nav-links" class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </nav>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav id="nav-links" class="nav-links">
       <a href="#">Início</a>
       <a href="#">Loja</a>
       <a href="#">Sobre</a>
       <a href="#">Contato</a>
-    </nav> 
+    </nav>
   </header>
 
   <!-- Banner -->
@@ -36,7 +30,7 @@
     </div>
   </section>
 
-  <!-- Categories -->
+  <!-- Categorias -->
   <section class="categories">
     <div class="category">
       <img src="imgs/Alemanha.jpg" alt="New Arrivals" />
@@ -55,7 +49,7 @@
     </div>
   </section>
 
-  <!-- Favorites -->
+  <!-- Favoritos -->
   <section class="favorites">
     <h2>OUR FAVORITES</h2>
     <div class="products">
@@ -67,39 +61,45 @@
       <div class="product">
         <img src="imgs/WhatsApp Image 2025-05-03 at 4.52.31 PM.jpeg" alt="Product 2" />
         <h4>Sneakers</h4>
-        <button onclick="addToCart('Sneakers', 299.90)">Add</button>
+        <button onclick="addToCart('Sneakers', 299.90)">ADD</button>
       </div>
       <div class="product">
-        <img src="imagens/produto3.jpg" alt="Product 3" />
+        <img src="imgs/produto3.jpg" alt="Product 3" />
         <h4>Black Hoodie</h4>
-        <button onclick="addToCart('Black Hoodie', 189.90)">Add</button>
+        <button onclick="addToCart('Black Hoodie', 189.90)">ADD</button>
       </div>
     </div>
   </section>
 
-  <!-- Cart -->
+  <!-- Carrinho -->
   <section class="carrinho">
-  <h3>Carrinho</h3>
-  <ul id="cart-items"></ul>
-  <p id="cart-total">Total: R$ 0,00</p>
-  <button onclick="checkout()">Finalizar Compra (Pix)</button>
+    <h3>Carrinho</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: R$ 0,00</p>
+    <button class="pix-btn" onclick="checkout()">Finalizar Compra (Pix)</button>
     <div id="pix-qrcode"></div>
-</section>
+  </section>
 
- <footer>
-  <p>&copy; 2025 SERAFA STORE. Todos os direitos reservados.</p>
-  <a href="https://wa.me/5511943053076" target="_blank" style="margin: 0 10px;">
-    <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp" />
-  </a>
-  <a href="https://instagram.com/e_storeoficial_" target="_blank" style="margin: 0 10px;">
-    <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram" />
-  </a>
-</footer>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 SERAFA STORE. Todos os direitos reservados.</p>
+    <div class="social-icons">
+      <a href="https://wa.me/5511943053076" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp" />
+      </a>
+      <a href="https://instagram.com/e_storeoficial_" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram" />
+      </a>
+    </div>
+  </footer>
 
-  <a href="https://wa.me/5511943053076" target="_blank" id="whatsapp-float">
-  <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" />
-</a>
-  
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5511943053076" target="_blank" id="whatsapp-float" class="whatsapp-float">
+    <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
+
