@@ -170,3 +170,19 @@ button:hover {
   background-color: #333;
   animation: pulse 0.6s;
 }
+
+.menu-icon a i { /* Estiliza os ícones dentro dos links do menu */
+  transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.menu-icon a:hover i { /* Estilo aplicado quando o mouse passa sobre o link */
+  transform: scale(1.2); /* Aumenta um pouco o tamanho do ícone */
+}
+
+.social-icons a i { /* Estiliza os ícones de redes sociais */
+  transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.social-icons a:hover i { /* Estilo aplicado quando o mouse passa sobre o link */
+  transform: scale(1.2); /* Aumenta um pouco o tamanho do ícone */
+}
