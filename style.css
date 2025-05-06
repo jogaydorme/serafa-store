@@ -77,9 +77,6 @@ button:hover {
   animation: pulse 0.6s;
   transform: scale(1.05); /* Adicionei um pequeno aumento de escala junto com a animação */
   
-  /* ... outras propriedades do botão ... */
-  font-size: 0.9rem; /* Diminui ligeiramente o tamanho da fonte */
-  padding: 0.7rem 1rem; /* Ajusta o padding para compensar a menor fonte */
 }
 
 footer {
