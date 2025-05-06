@@ -232,6 +232,22 @@ body {
   max-width: 250px;
   height: auto;
   display: block;
+
+  .cart-animate {
+  animation: cartPulse 0.5s;
+}
+
+@keyframes cartPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
   margin: 0 auto;
   border-radius: 12px;
 }
