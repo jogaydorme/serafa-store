@@ -157,7 +157,7 @@ footer {
 .produto-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centraliza os produtos na linha */
+  justify-content: flex-start; /* Centraliza os produtos na linha */
   gap: 2rem; /* Espaçamento entre os produtos */
   padding: 2rem; /* Espaçamento ao redor dos produtos */
 }
