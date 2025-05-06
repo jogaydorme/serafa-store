@@ -1,237 +1,277 @@
+/* Estilos Gerais */
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Cabeçalho */
 .navbar {
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
 .nav-middle {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
 }
 
 .nav-links a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
+/* Banner */
 .banner {
-  /* Estilos para a section.banner, se necessário */
+    /* Estilos para a section.banner, se necessário */
 }
 
 .banner-container {
-  max-width: 1200px; /* Ajuste conforme necessário */
-  margin: 0 auto;
-  padding: 0 1rem;
+    max-width: 1170px; /* Largura do banner da imagem a16.png */
+    margin: 0 auto;
+    overflow: hidden; /* Garante que a imagem não ultrapasse */
 }
 
-.banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0;
+.banner-image {
+    width: 100%; /* Ocupa toda a largura do container */
+    height: auto;
+    display: block;
+    object-fit: cover; /* Mantém a proporção e cobre o container */
 }
 
 .nav-bottom {
-  display: flex;
-  justify-content: space-around;
-  padding: 0.5rem 0;
-  background-color: #f0f0f0;
-  font-size: 0.9rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    background-color: #f0f0f0;
+    font-size: 0.9rem;
 }
 
 .nav-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-info i {
-  margin-right: 0.3rem;
+    margin-right: 0.3rem;
 }
 
+/* Produtos */
 .produtos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
 }
 
 .produto-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
 }
 
-.produto:hover {
-  transform: translateY(-5px);
-}
-
-.produto img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
+.produto {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    max-width: 220px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
 }
 
 .produto h3 {
-  text-align: center; /* Título centralizado */
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Carrinho */
+.carrinho {
+    /* ... */
+}
+
+/* Footer */
+footer {
+    /* ... */
+}
+
+/* Menu Mobile */
+.mobile-nav-container {
+    /* ... */
+}
+
+.mobile-nav-container.show-mobile-nav {
+    /* ... */
+}
+
+.mobile-nav-wrapper {
+    /* ... */
+}
+
+.mobile-nav-top {
+    /* ... */
+}
+
+.mobile-nav-logo {
+    /* ... */
+}
+
+.mobile-nav-close {
+    /* ... */
+}
+
+.mobile-nav-list {
+    /* ... */
+}
+
+.mobile-nav-item {
+    /* ... */
+}
+
+.mobile-nav-link {
+    /* ... */
+}
+
+.mobile-nav-arrow {
+    /* ... */
+}
+
+.mobile-nav-submenu {
+    /* ... */
+}
+
+.mobile-nav-submenu.show-submenu {
+    /* ... */
+}
+
+.mobile-nav-submenu-item {
+    /* ... */
+}
+
+.mobile-search {
+    /* ... */
+}
+
+.mobile-search-form {
+    /* ... */
+}
+
+.mobile-search-input {
+    /* ... */
+}
+
+.mobile-search-submit {
+    /* ... */
+}
+
+.rotate-arrow {
+    /* ... */
 }
 
 button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.3s ease;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-  background-color: #333;
-  animation: pulse 0.6s;
-  transform: scale(1.05);
+    background-color: #333;
+    animation: pulse 0.6s;
+    transform: scale(1.05);
 }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #0F4D7D;
-  color: white;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.social-icons a {
-  color: #0F4D7D;
-  font-size: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.menu-icon a i {
-  transition: transform 0.2s ease-in-out;
-}
-
-.menu-icon a:hover i {
-  transform: scale(1.1);
-  transition: transform 0.1s ease-in-out 0s;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.submenu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #000;
-  width: auto;
-  min-width: 150px;
-  z-index: 10;
-  display: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown:hover .submenu {
-  display: block;
-}
-
-.submenu li a {
-  color: white;
-  padding: 0.8rem 1.2rem;
-  display: block;
-  text-decoration: none;
-}
-
-.submenu li a:hover {
-  background-color: #333;
-}
-
-.menu-icon a:active i {
-  transform: scale(0.9);
+.search-container {
+    /* Estilos para o container do campo de busca, se necessário */
 }
 
 .search-bar {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
 }
 
-.cart-icon {
-  position: relative;
+.cart-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
 }
 
 .cart-count {
-  position: absolute;
-  top: -0.5rem;
-  right: -0.5rem;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 0.2rem 0.4rem;
-  font-size: 0.8rem;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
 }
 
+.cart-total {
+    font-size: 0.9rem;
+}
+
+/* Estilos Globais (Reset e Tipografia) */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff;
-  color: #111;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #111;
 }
 
 .titulo-sessao {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 60px;
-  margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 .img-categoria {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-}
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
