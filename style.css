@@ -153,3 +153,30 @@ footer {
 .menu-icon a:active i { /* Opcional: Feedback ao clicar */
   transform: scale(0.9);
 }
+
+.produto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os produtos na linha */
+  gap: 2rem; /* Espaçamento entre os produtos */
+  padding: 2rem; /* Espaçamento ao redor dos produtos */
+}
+
+.produto {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  max-width: 220px; /* Largura máxima de cada produto */
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  margin-bottom: 2rem; /* Espaçamento entre as linhas de produtos */
+}
+
+/* Se quiser centralizar os títulos das categorias via CSS */
+h2 {
+  text-align: center;
+  margin-top: 2rem; /* Espaçamento acima do título */
+  margin-bottom: 2rem; /* Espaçamento abaixo do título */
+}
