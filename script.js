@@ -1,3 +1,11 @@
+// Seleciona elementos do DOM
+const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const mobileNavContainer = document.querySelector('.mobile-nav-container');
+const mobileNavClose = document.querySelector('.mobile-nav-close');
+const mobileNavList = document.querySelector('.mobile-nav-list');
+const mobileNavItemsWithSubmenu = document.querySelectorAll('.mobile-nav-item.has-submenu');
+const desktopNavItemsWithSubmenu = document.querySelectorAll('.desktop-nav-item > .desktop-nav-link + .desktop-nav-list');
+
 let carrinho = [];
 let total = 0;
 
@@ -29,26 +37,51 @@ function finalizarCompra() {
   atualizarCarrinho();
 }
 
-// Seleciona o elemento onde a contagem do carrinho será exibida
-const cartCount = document.querySelector('.cart-count');
+// Menu Mobile
+if (mobileNavToggle && mobileNavContainer && mobileNavClose && mobileNavList) {
+  mobileNavToggle.addEventListener('click', () => {
+    mobileNavContainer.classList.add('show-mobile-nav');
+    document.body.style.overflow = 'hidden'; // Impede o scroll do fundo
+  });
 
-// Inicializa a contagem do carrinho
-let itemCount = 0;
+  mobileNavClose.addEventListener('click', () => {
+    mobileNavContainer.classList.remove('show-mobile-nav');
+    document.body.style.overflow = ''; // Restaura o scroll do fundo
+  });
 
-// Função para adicionar um item ao carrinho (você já tem isso, mas vou incluir para referência)
-function adicionarAoCarrinho(nomeProduto, preco) {
-  itemCount++;
-  cartCount.innerText = itemCount; // Atualiza a contagem exibida
-  animateCart(); // Chama a função para animar o carrinho
+  mobileNavList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('mobile-nav-link')) {
+      mobileNavContainer.classList.remove('show-mobile-nav');
+      document.body.style.overflow = ''; // Restaura o scroll do fundo
+    }
+  });
 
-  // Aqui você adicionaria a lógica real para adicionar o item ao carrinho (por exemplo, atualizar um array do carrinho, etc.)
-  console.log(`Produto adicionado: ${nomeProduto}, Preço: R$ ${preco}`);
+  mobileNavItemsWithSubmenu.forEach(item => {
+    const submenu = item.querySelector('.mobile-nav-submenu');
+    const link = item.querySelector('.mobile-nav-link');
+    const arrow = item.querySelector('.mobile-nav-arrow');
+
+    if (submenu && link && arrow) {
+      link.addEventListener('click', (event) => {
+        if (event.target === link || event.target === arrow || event.target === arrow.querySelector('i')) {
+          event.preventDefault(); // Evita que o link navegue
+          submenu.classList.toggle('show-submenu');
+          arrow.classList.toggle('rotate-arrow');
+        }
+      });
+    }
+  });
 }
 
-// Função para animar o carrinho
-function animateCart() {
-  cartCount.classList.add('cart-animate'); // Adiciona a classe para ativar a animação
-  setTimeout(() => {
-    cartCount.classList.remove('cart-animate'); // Remove a classe após a animação terminar
-  }, 500); // Tempo da animação (0.5 segundos)
+// Menu Desktop (Submenus)
+if (desktopNavItemsWithSubmenu.length > 0) {
+  desktopNavItemsWithSubmenu.forEach(submenu => {
+    const parentItem = submenu.parentElement;
+    parentItem.addEventListener('mouseenter', () => {
+      submenu.style.display = 'block';
+    });
+    parentItem.addEventListener('mouseleave', () => {
+      submenu.style.display = 'none';
+    });
+  });
 }
