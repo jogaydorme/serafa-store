@@ -5,23 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SERAFA STORE</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  
+   <!-- Navbar -->
+  <header class="navbar">
     <div class="logo">SERAFA STORE</div>
-    <nav id="menu-mobile">
-      <ul>
+    <nav id="nav-links" class="nav-links">
         <li><a href="#">Início</a></li>
         <li><a href="#">Loja</a></li>
         <li><a href="#">Sobre</a></li>
         <li><a href="#">Contato</a></li>
-      </ul>
     </nav>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </header>
 
+   <!-- Banner -->
   <section class="banner">
-    <img src="imagens/banner.jpg" alt="Banner Streetwear" />
+    <img src="imgs/banner.jpg" alt="Banner Streetwear" />
     <div class="texto-banner">
       <h1>ESTILO</h1>
       <p>TENDÊNCIAS</p>
@@ -29,6 +33,7 @@
     </div>
   </section>
 
+  <!-- Destaques -->
   <section class="categorias">
     <div class="categoria">
       <img src="imagens/produto1.jpg" alt="Lançamentos" />
@@ -38,7 +43,7 @@
     <div class="categoria">
       <img src="imagens/produto2.jpg" alt="Promoções" />
       <h3>PROMOÇÕES</h3>
-      <p>Até 80% OFF</p>
+      <p>Até 20% OFF</p>
     </div>
     <div class="categoria">
       <img src="imagens/produto3.jpg" alt="Moletons" />
@@ -47,9 +52,11 @@
     </div>
   </section>
 
+  <!-- Favoritos -->
   <section class="favoritos">
     <h2>NOSSOS FAVORITOS</h2>
     <div class="produtos">
+     
       <!-- Repita esse bloco para mais placeholders -->
       <div class="produto">
         <img src="imagens/produto1.jpg" alt="Produto 1" />
@@ -67,6 +74,13 @@
         <button onclick="adicionarAoCarrinho('Moletom Preto')">Adicionar</button>
       </div>
     </div>
+  </section>
+  
+  <!-- Carrinho -->
+  <section class="carrinho">
+    <h3>Carrinho</h3>
+    <ul id="carrinho"></ul>
+    <button onclick="checkout()">Finalizar Compra (Pix)</button>
   </section>
 
   <footer>
