@@ -10,15 +10,21 @@
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">SERAFA STORE</div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav id="nav-links" class="nav-links">
-      <a href="#">Início</a>
-      <a href="#">Loja</a>
-      <a href="#">Sobre</a>
-      <a href="#">Contato</a>
-    </nav>
-  </header>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <div class="logo">SERAFA STORE</div>
+
+  <nav id="nav-links" class="nav-links">
+    <a href="#">Início</a>
+    <a href="#">Loja</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </nav>
+
+  <div class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+  </div>
+</header>
 
   <!-- Banner -->
   <section class="banner">
