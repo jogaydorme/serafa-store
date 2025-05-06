@@ -1,99 +1,106 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>SERAFA STORE</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #2a2a2a;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #0F4D7D;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            padding: 30px;
-        }
-        .product {
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            width: 250px;
-            padding: 15px;
-            text-align: center;
-        }
-        .product img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .product h2 {
-            font-size: 18px;
-            margin: 10px 0 5px;
-        }
-        .product p {
-            margin: 5px 0;
-        }
-        .whatsapp {
-            display: block;
-            background-color: #25d366;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            background-color: #111;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SERAFA STORE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #222;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .banner {
+      background: url('banner.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+    .products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .product {
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    .product h3 {
+      margin: 10px;
+      font-size: 18px;
+    }
+    .product p {
+      color: #555;
+      font-size: 16px;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>SERAFA STORE</h1>
-        <p>Oversized premium para quem tem atitude</p>
-    </header>
 
-    <section class="products">
-        <div class="product">
-            <img src="img/camiseta1.jpg" alt="Camiseta 1" />
-            <h2>Camiseta 1</h2>
-            <p>R$69,90</p>
-            <a class="whatsapp" href="https://wa.me/5511943053076" target="_blank">Comprar pelo WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="img/camiseta3.jpg" alt="Camiseta 3" />
-            <h2>Camiseta 3</h2>
-            <p>R$69,90</p>
-            <a class="whatsapp" href="https://wa.me/5511943053076" target="_blank">Comprar pelo WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="img/camiseta5.jpg" alt="Camiseta 5" />
-            <h2>Camiseta 5</h2>
-            <p>R$69,90</p>
-            <a class="whatsapp" href="https://wa.me/5511943053076" target="_blank">Comprar pelo WhatsApp</a>
-        </div>
-    </section>
+  <header>
+    <img src="serafa-logo.png" alt="SERAFA STORE Logo" />
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Masculino</a>
+      <a href="#">Feminino</a>
+      <a href="#">Promoções</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
 
-    <footer>
-        &copy; 2025 SERAFA STORE — Todos os direitos reservados.
-    </footer>
-</body>
-</html>
+  <div class="banner">
+    SERAFA STORE
+  </div>
+
+  <div class="section">
+    <h2>Destaques</h2>
+    <div class="products">
+      <div class="product">
+        <img src="produto1.jpg" alt="Produto 1">
+        <h3>Camisa Oversized</h3>
+        <p>R$ 89,90</p>
+      </div>
+      <div cl
