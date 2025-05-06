@@ -249,7 +249,7 @@ body {
 
 .img-categoria {
   width: 100%;
-  max-width: 200px; /* ou o tamanho que quiser */
+  max-width: 250px; /* ou o tamanho que quiser */
   height: auto;
   display: block;
   margin: 0 auto; /* centraliza */
