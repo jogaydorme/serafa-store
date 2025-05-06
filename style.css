@@ -168,7 +168,12 @@ footer {
   transition: transform 0.3s ease;
   margin-bottom: 2rem; /* Espaçamento entre as linhas de produtos */
   
-} /* Largura máxima de cada produto */
+}
+
+.produto h3 {
+  text-align: center; /* Adicione isso */
+}
+
 
 /* Se quiser centralizar os títulos das categorias via CSS */
 h2 {
