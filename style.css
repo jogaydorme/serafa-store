@@ -115,8 +115,7 @@ footer {
 
 .menu-icon a:hover i {
   transform: scale(1.1); /* Ligeiro aumento */
-  transition: transform 0.1s ease-in-out 0s, /* Rápido para aumentar */
-              scale 0.1s ease-in-out 0.1s; /* Rápido para voltar */
+  transition: transform 0.1s ease-in-out 0s, /* Rápido para aumentar */            
 }
 
 .menu-icon a:active i { /* Opcional: Feedback ao clicar */
