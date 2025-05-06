@@ -268,5 +268,25 @@ footer {
   border-color: #fff;
 }
 
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.whatsapp-float img {
+  width: 50px;
+}
+
 
 
