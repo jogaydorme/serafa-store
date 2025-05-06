@@ -238,3 +238,20 @@ body {
   background-color: #fff;
   color: #111;
 }
+
+.titulo-sessao {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.img-categoria {
+  width: 100%;
+  max-width: 200px; /* ou o tamanho que quiser */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* centraliza */
+  border-radius: 12px;
+}
