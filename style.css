@@ -193,6 +193,14 @@ footer {
   border-radius: 6px;
 }
 
+#whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+
 
 /* --- Ajuste para imagens dos produtos no desktop --- */
 @media (min-width: 769px) {
