@@ -200,7 +200,14 @@ footer {
   z-index: 999;
 }
 
+}
 
+.produto {
+  background: #f8f8f8;
+  padding: 1rem;
+  border-radius: 6px;
+  min-height: 320px; /* ou um valor testado para seus conteúdos */
+}
 
 /* --- Ajuste para imagens dos produtos no desktop --- */
 @media (min-width: 769px) {
@@ -238,16 +245,4 @@ footer {
 }
 
 
-.produto img {
-  width: 100%;
-  height: 200px; /* ou 180px, ajuste conforme desejar */
-  object-fit: cover; /* Corta o excesso sem distorcer */
-  border-radius: 6px;
-}
 
-.produto {
-  background: #f8f8f8;
-  padding: 1rem;
-  border-radius: 6px;
-  min-height: 320px; /* ou um valor testado para seus conteúdos */
-}
