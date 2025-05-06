@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Streetwear Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SERAFA STORE</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <header class="header">
-    <div class="logo">STREETWEAR</div>
+    <div class="logo">SERAFA STORE</div>
     <nav class="nav">
       <button class="menu-toggle">&#9776;</button>
       <ul class="nav-links">
@@ -18,51 +19,62 @@
         <li><a href="#">Shop</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#" class="cart-link">🛒 <span id="cart-count">0</span></a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- HERO BANNER -->
   <section class="hero">
-    <div class="hero-text">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
       <h1>STYLE</h1>
       <p>LATEST TRENDS</p>
       <a href="#" class="btn">SHOP NOW</a>
     </div>
   </section>
 
+  <!-- CATEGORIES -->
   <section class="categories">
     <div class="category">
-      <img src="https://via.placeholder.com/300x200?text=New+Arrivals" alt="New Arrivals">
+      <img src="img/new-arrivals.jpg" alt="New Arrivals">
       <h3>NEW ARRIVALS</h3>
       <a href="#">Shop Now</a>
     </div>
     <div class="category">
-      <img src="https://via.placeholder.com/300x200?text=Sale" alt="Sale">
+      <img src="img/sale.jpg" alt="Sale">
       <h3>SALE</h3>
       <p>Up to 80% Off</p>
       <a href="#">Shop Now</a>
     </div>
     <div class="category">
-      <img src="https://via.placeholder.com/300x200?text=Hoodies" alt="Hoodies">
+      <img src="img/hoodies.jpg" alt="Hoodies">
       <h3>HOODIES</h3>
       <a href="#">Shop Now</a>
     </div>
   </section>
 
+  <!-- FAVORITE PRODUCTS -->
   <section class="favorites">
     <h2>OUR FAVORITES</h2>
     <div class="grid">
-      <div><img src="https://via.placeholder.com/200x200?text=Item+1" alt=""></div>
-      <div><img src="https://via.placeholder.com/200x200?text=Item+2" alt=""></div>
-      <div><img src="https://via.placeholder.com/200x200?text=Item+3" alt=""></div>
-      <div><img src="https://via.placeholder.com/200x200?text=Item+4" alt=""></div>
-      <div><img src="https://via.placeholder.com/200x200?text=Item+5" alt=""></div>
-      <div><img src="https://via.placeholder.com/200x200?text=Item+6" alt=""></div>
+      <!-- Replique esse bloco para adicionar mais produtos -->
+      <div class="product">
+        <img src="img/product1.jpg" alt="Product 1">
+        <h4>Produto 1</h4>
+        <button class="add-to-cart">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="img/product2.jpg" alt="Product 2">
+        <h4>Produto 2</h4>
+        <button class="add-to-cart">Adicionar ao Carrinho</button>
+      </div>
+      <!-- ... -->
     </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Streetwear Store. All rights reserved.</p>
+    <p>&copy; 2025 SERAFA STORE. All rights reserved.</p>
   </footer>
 
   <script src="js/script.js"></script>
