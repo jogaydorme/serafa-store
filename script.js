@@ -3,11 +3,22 @@ $(document).ready(function () {
     $('.nav-links').toggleClass('active');
   });
 
-  let cartCount = 0;
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   $('.add-to-cart').click(function () {
-    cartCount++;
-    $('#cart-count').text(cartCount);
+    const card = $(this).closest('.product');
+    const product = {
+      name: card.find('h4').text(),
+      price: 129.90, // Altere para o preço real
+      image: card.find('img').attr('src')
+    };
+
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    $('#cart-count').text(cart.length);
     alert('Produto adicionado ao carrinho!');
   });
+
+  $('#cart-count').text(cart.length);
 });
